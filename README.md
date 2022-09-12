@@ -93,6 +93,12 @@ SSOSYNC_SCIM_ACCESS_TOKEN=<YOUR_TOKEN>
 SSOSYNC_SCIM_ENDPOINT=<YOUR_ENDPOINT>
 ```
 
+## Docker Build & Run
+```bash
+docker build -t ssosync .
+docker run -it --rm ssosync *FLAGS*
+```
+
 ## Local Usage
 
 ```bash
