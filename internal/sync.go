@@ -619,11 +619,6 @@ func (s *syncGSuite) getGoogleDirectory() ([]*admin.Group, []*admin.User, map[st
 
         	for _, m:= range groupMembers {
 		        log.WithField("email", m.Email).Debug("processing member")
-			// Ignore Owners they aren't relevant in Identity Store
-			if m.Role == "OWNER" {
-			        log.WithField("id", m.Email).Debug("ignoring owner roles")
-				continue
-			}
 
         		// Ignore any external members, since they don't have users
 			// that can be synced
@@ -1176,4 +1171,3 @@ func (s *syncGSuite) RemoveUserFromGroup(userId *string, groupId *string) error 
 
 	return nil
 }
-
